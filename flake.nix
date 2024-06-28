@@ -28,10 +28,9 @@
           lockFile = ./Cargo.lock;
         };
 
-        doCheck = false;
+        doCheck = true;
 
-        env = {
-        };
+        env = {};
       };
     });
 
