@@ -1,0 +1,13 @@
+use hello;
+
+#[test]
+fn check_value1() {
+    let val = hello::make_string("hello", "world");
+    assert_eq!(val, String::from("hello world"));
+}
+
+#[test]
+fn check_value2() {
+    let val = hello::make_string("world", "hello");
+    assert_eq!(val, String::from("world hello"));
+}
