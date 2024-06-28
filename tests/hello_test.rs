@@ -15,5 +15,5 @@ fn check_value2() {
 #[test]
 fn check_value3() {
     let val = hello::make_string("hello", "hello");
-    assert_eq!(val, String::from("world hello"));
+    assert_eq!(val, String::from("hello hello"));
 }
