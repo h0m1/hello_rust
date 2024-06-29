@@ -24,3 +24,5 @@ jobs:
     - uses: DeterminateSystems/flake-checker-action@main
     - name: Run `nix build`
       run: nix build .
+    - name: Print nixpkgs version
+      run: nix-instantiate --eval -E '(import <nixpkgs> {}).lib.version'
