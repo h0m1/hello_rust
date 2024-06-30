@@ -19,6 +19,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - uses: docker/setup-qemu-action@v3
     - uses: DeterminateSystems/nix-installer-action@main
       with:
         extra-conf:
@@ -26,7 +27,7 @@ jobs:
     - uses: DeterminateSystems/magic-nix-cache-action@main
     - uses: DeterminateSystems/flake-checker-action@main
     - run: nix-instantiate --eval -E '(import <nixpkgs> {}).lib.version'
-    - run: sudo apt-get install -y qemu-user-static
+    # - run: sudo apt-get install -y qemu-user-static
     - uses: cachix/cachix-action@v14
       with:
         name: m74
