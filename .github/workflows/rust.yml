@@ -24,6 +24,9 @@ jobs:
     - uses: DeterminateSystems/flake-checker-action@main
     - name: Print nixpkgs version
       run: nix-instantiate --eval -E '(import <nixpkgs> {}).lib.version'
+    - uses: docker/setup-qemu-action@v3
+      with:
+        platforms: arm64
     - uses: cachix/cachix-action@v14
       with:
         name: m74
