@@ -39,4 +39,5 @@ jobs:
     #   run: nix build .
     - name: Run `nix build aarch64-linux`
       # run: nix-build --option system aarch64-linux --option sandbox false --extra-platforms aarch64-linux
-      run: nix-build .#packages.aarch64-linux.hello-rust
+      run: |
+        nix build --option system aarch64-linux --extra-platforms aarch64-linux .
