@@ -39,7 +39,7 @@
       pkgs = import nixpkgs {inherit system;};
     in
       pkgs.mkShell {
-        buildInputs = with pkgs; [cargo];
+        buildInputs = with pkgs; [cargo rust-analyzer];
         shellHook = ''
           export CARGO_HOME=$(pwd)/cargo
         '';
