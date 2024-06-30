@@ -5,4 +5,6 @@ fn main() {
     println!("{}", val);
     let val = make_string("rust", "hello");
     println!("{}", val);
+    let val = make_string("hello", "hello");
+    println!("{}", val);
 }
