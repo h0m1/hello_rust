@@ -2,5 +2,5 @@ use hello::make_string;
 
 fn main() {
     let val = make_string("hello", "rust");
-    println!("{} {}", val, 0);
+    println!("{} {}", val, 1);
 }
